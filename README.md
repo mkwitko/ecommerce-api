@@ -1,5 +1,7 @@
 # Community Storefront — API
 
+**[Engineering case study: vertical slices, authorization and typed contracts](docs/PORTFOLIO_CASE_STUDY.md)**
+
 A TypeScript/Fastify API for the [Community Storefront web application](https://github.com/mkwitko/udv-shop), covering stores, products, orders, donations, and supporting business workflows.
 
 > **Portfolio note:** Descriptions below are grounded in the checked-in implementation and architecture docs. They are not claims of current production traffic, security certification, or independently benchmarked performance.
