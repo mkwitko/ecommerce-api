@@ -85,3 +85,9 @@ Tests require a separate test database as configured by the repository. The [`te
 Repository code contains safeguards for auth, validation, payment flows, and cross-origin access. Security still depends on environment configuration, private secrets, operational controls, and independent testing; this README is not an audit or certification. Do not share live credentials, user records or real transaction data in issues, examples or screenshots.
 
 **Further documentation:** [Deploy](docs/DEPLOY.md) · [Architecture](docs/ARCHITECTURE.md) · [Decisions](docs/DECISIONS.md)
+
+---
+
+## Engineering evidence
+
+[Engineering case study](docs/ENGINEERING_CASE_STUDY.md) — architecture decisions, implementation links, trade-offs and remaining verification work.
