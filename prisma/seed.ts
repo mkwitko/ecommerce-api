@@ -37,6 +37,8 @@ export async function seedDatabase(db: PrismaClient): Promise<string> {
     update: {
       status: "active",
       wooviPixKey: "demo@colheita.fake",
+      // sem status a chave nasce não verificada e assertProviderConfigured barra o checkout
+      wooviPixKeyStatus: "verified",
       whatsapp: "5511988887777",
       deliveryNote:
         "Retirada no núcleo, sábado de manhã. Entrega no bairro combinada por WhatsApp.",
@@ -53,6 +55,8 @@ export async function seedDatabase(db: PrismaClient): Promise<string> {
       // nasce como qualquer loja nova — cartão só depois do onboarding em Recebimento.
       // chave Pix fictícia: com DEV_FAKE_PAYMENTS=true o checkout Pix funciona inteiro
       wooviPixKey: "demo@colheita.fake",
+      // sem status a chave nasce não verificada e assertProviderConfigured barra o checkout
+      wooviPixKeyStatus: "verified",
       whatsapp: "5511988887777",
       deliveryNote:
         "Retirada no núcleo, sábado de manhã. Entrega no bairro combinada por WhatsApp.",
