@@ -327,12 +327,13 @@ describe("janela do sorteio", () => {
     // Sorteio realizado não recebe mais doação: a janela aberta virou fechada no draw.
     expect(drawn.endsAt).not.toBeNull();
 
-    // ...e por isso o sorteio seguinte não colide mais.
+    // ...e por isso o sorteio seguinte não colide mais. O fim da janela é "agora" (relógio
+    // real), então o próximo começa nele em vez de numa data fixa que o tempo deixa para trás.
     const proximo = await repo.create({
       campaignId: campaign.id,
       title: "Setembro",
       centsPerNumber: 1000,
-      startsAt: SETEMBRO,
+      startsAt: drawn.endsAt as Date,
       endsAt: null,
       drawAt: null,
       prizes: [{ position: 1, title: "Camiseta" }],
